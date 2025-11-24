@@ -6,16 +6,16 @@ and view all habits in a clean card-based layout.
 
 Features :
 
-Add new habits
-Select time + AM/PM
-Display habits in card layout
-Responsive UI using Bootstrap 5
+Add new habits, 
+Select time + AM/PM, 
+Display habits in card layout, 
+Responsive UI using Bootstrap 5.
 
 Technologies Used :
 
-HTML5
-CSS3
-Bootstrap 5
+HTML5, 
+CSS3, 
+Bootstrap 5.
 
 Live Demo :
 
