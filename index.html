@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Habit & Routine Tracker</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Habit Tracker</a>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container py-4">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="fw-bold">Your Daily Habits</h2>
+
+            <!-- Add Habit Button -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addHabitModal">
+                + Add Habit
+            </button>
+        </div>
+
+        <!-- Habit List -->
+        <div class="row g-3">
+
+            <!-- Habit Card 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm habit-card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Drink Water</h5>
+                        <p class="text-muted">Time: 8:00 AM</p>
+
+                        <!-- Status -->
+                        <span class="badge bg-success">Completed</span>
+
+                        <hr>
+
+                        <!-- Weekly Progress -->
+                        <p class="fw-semibold mb-1">Weekly Progress</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 80%;"> 80% </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habit Card 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm habit-card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Exercise</h5>
+                        <p class="text-muted">Time: 6:00 PM</p>
+
+                        <span class="badge bg-warning text-dark">Pending</span>
+
+                        <hr>
+
+                        <p class="fw-semibold mb-1">Weekly Progress</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 40%;"> 40% </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Habit Card 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm habit-card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold">Read Book</h5>
+                        <p class="text-muted">Time: 9:00 PM</p>
+
+                        <span class="badge bg-danger">Missed</span>
+
+                        <hr>
+
+                        <p class="fw-semibold mb-1">Weekly Progress</p>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 20%;"> 20% </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="mt-5">
+            <h3 class="fw-bold mb-3">Monthly Calendar View</h3>
+
+            <div class="calendar shadow-sm p-4 bg-white rounded">
+                <table class="table table-bordered text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td><td>1</td><td>2</td><td class="bg-success text-white fw-bold">3</td><td>4</td><td>5</td><td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td><td class="bg-warning">8</td><td>9</td><td>10</td><td class="bg-danger text-white">11</td><td>12</td><td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Add Habit Modal -->
+    <div class="modal fade" id="addHabitModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Add New Habit</h5>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <label class="fw-bold">Habit Name</label>
+                    <input type="text" class="form-control mb-3">
+
+                    <label class="fw-bold">Select Time</label>
+                    <div class="d-flex gap-2">
+                        <input type="time" class="form-control">
+                        <select class="form-select">
+                            <option>AM</option>
+                            <option>PM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary">Add Habit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
