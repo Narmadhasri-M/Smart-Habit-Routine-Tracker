@@ -22,7 +22,3 @@ Live Demo :
 🔗 GitHub Pages Link:
 https://narmadhasri-m.github.io/Smart-Habit-Routine-Tracker/
 
-Author :
-
-Narmadhasri M
-Frontend Developer | CSE Student
